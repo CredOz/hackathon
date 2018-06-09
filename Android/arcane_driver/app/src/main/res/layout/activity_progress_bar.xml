@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/progresslayout"
+                xmlns:ProgressWheel="http://schemas.android.com/tools"
+                android:background="@color/appColor"
+
+    >
+
+
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:id="@+id/linearLayout">
+
+        <!--  <ProgressBar android:layout_width="150dp"
+          android:layout_height="150dp"/>-->
+
+        <com.cog.arcaneDriver.ProgressWheel
+            android:id="@+id/progressBarTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            ProgressWheel:pwTextColor="#222222"
+            ProgressWheel:pwTextSize="14sp"
+            ProgressWheel:pwRimColor="#FFF"
+            ProgressWheel:pwBarLength="50dp"
+            ProgressWheel:pwBarColor="#000"
+            ProgressWheel:pwBarWidth="0dp"
+            ProgressWheel:pwRimWidth="2dp"
+            ProgressWheel:pwSpinSpeed="2dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorWhite"
+        android:text="@string/request_from_rider"
+        android:id="@+id/textView4" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:text="@string/touch_to_accept"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:layout_width="540dp"
+        android:layout_height="540dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/map_view"
+        android:layout_below="@+id/textView4"
+        android:layout_alignBottom="@+id/linearLayout" />
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/colorWhite"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/appColor"
+        android:id="@+id/toolbar"
+        >
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:src="@drawable/arrow_left"
+            android:background="@null"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/back"
+            android:text="@string/upload_document"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/continuebut"
+        android:text="@string/uploadText"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/appColor"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:id="@+id/continuebut"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/continue_button"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/idproofImg"
+            android:scaleType="fitXY"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/file_document"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/idproofImg"
+            android:layout_alignBottom="@+id/idproofImg"
+            android:id="@+id/txtidproof"
+            android:text="DOCUMENT"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/appColor"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/licenceImg"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/idproofImg"
+            android:background="@drawable/file_document"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/licenceImg"
+            android:layout_alignBottom="@+id/licenceImg"
+            android:id="@+id/txtidlicence"
+            android:text="DOCUMENT"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txtidproof"
+            android:textColor="@color/appColor"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            />
+        <Spinner
+            android:id="@+id/car_category"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="35dp"
+            android:textColor="@color/appColor"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/spinner_layout"
+            android:overlapAnchor="false"
+            android:layout_below="@+id/licenceImg"
+            android:layout_alignEnd="@+id/txtidlicence"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
